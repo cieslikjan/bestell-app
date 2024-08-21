@@ -15,7 +15,7 @@
 
 </head>
 
-<body>
+<body onload="init()">
     <header>
         <img class="logo" src="./assets/img/logo/Bestell App- Logo.svg" alt="">
         <i class="fa-solid fa-bars fa-2xl"></i>
@@ -36,39 +36,15 @@
                 <span>Beilagen</span>
             </div>
 
-            <div id="main-dishes" class="restaurant-category">
+            <div class="restaurant-category">
                 <img class="restaurant-image" src="./assets/img/pizza-2589575_1280.jpg" alt="">
                 <h1 class="heading mb-24">Hauptgerichte</h1>
 
-                <div class="dish-list">
-                    <div class="dish">
-                        <div class="dish-content">
-                            <h1 class="heading">Pizza Carlos</h1>
-                            <span class="dish-description">mit Pepperonisalami und Sauce Hollandaise</span>
-                            <span class="price"> 7,50 €</span>
-                        </div>
-                        <div> <i class="fa-solid fa-plus fa-xl"></i></div>
-                    </div>
-                    <div class="dish">
-                        <div class="dish-content">
-                            <h1 class="heading">Pizza Margharita</h1>
-                            <span class="dish-description">mit Käse</span>
-                            <span class="price"> 3,50 €</span>
-                        </div>
-                        <div> <i class="fa-solid fa-plus fa-xl"></i></div>
-                    </div>
-                    <div class="dish">
-                        <div class="dish-content">
-                            <h1 class="heading">Pizza Pasta</h1>
-                            <span class="dish-description">mit Pasta du unhold</span>
-                            <span class="price"> 63,50 €</span>
-                        </div>
-                        <div> <i class="fa-solid fa-plus fa-xl"></i></div>
-                    </div>
+                <div class="dish-list" id="main-dishes">
                 </div>
 
             </div>
-            <div id="pasta" class="restaurant-category">
+            <div id="pasta-dishes" class="restaurant-category">
                 <img class="restaurant-image" src="./assets/img/pasta-3547078_1280.jpg" alt="">
                 <h1 class="heading mb-24">Pasta</h1>
             </div>
@@ -83,43 +59,8 @@
                     <h1 class="heading">Warenkorb</h1>
                     <hr>
                 </div>
-                <div>
-                    <div class="basket-entry pd-12">
-                        <span class="basket-dish-title">Pizza Margharita</span>
-                        <div class="basket-dish-content">
-                            <div class="entry-upselling">
-                                <i class="fa-solid fa-minus fa-sm" style="color: var(--orange);"></i>
-                                <span>1x</span>
-                                <i class="fa-solid fa-plus fa-sm" style="color: var(--orange)"></i>
-                            </div>
-                            <div class="entry-price">
-                                <span>7,50€</span>
-                                <i class="fa-solid fa-trash fa-sm" style="color: var(--orange);"></i>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-                    <hr>
-
-                    <div class="basket-price-container">
-                        <span>Zwischensumme</span><span>64,50€</span>
-                    </div>
-
-                    <div class="basket-price-container">
-                        <span>Lieferkosten</span><span>5,00€</span>
-                    </div>
-                    <div class="basket-price-container bold">
-                        <span>Gesamt</span><span>69,50€</span>
-                    </div>
-                </div>
-
-
-
-
-
+                <div id="basket-content"></div>
+                <div id="basket-checkout"></div>
             </div>
         </div>
     </main>
