@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,122 @@
 
     <script src="./script.js"></script>
     <link rel="stylesheet" href="./style.css">
-    
+
+    <script src="https://kit.fontawesome.com/da08f37d82.js" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
-    
+    <header>
+        <img class="logo" src="./assets/img/logo/Bestell App- Logo.svg" alt="">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </header>
+
+    <main class="content">
+        <div class="restaurant">
+            <div class="restaurant-header">
+                <img class="restaurant-image" src="./assets/img/pickles-6604595_1280.jpg" alt="">
+            </div>
+            <div class="restaurant-description">
+                <h1 class="heading">Juan Carlos' Pizza Heaven</h1>
+                <span class="rating">Bewertung (5.2 von 5 Sternen)</span>
+            </div>
+            <div class="restaurant-categories">
+                <span>Pizza</span>
+                <span>Pasta</span>
+                <span>Beilagen</span>
+            </div>
+
+            <div id="main-dishes" class="restaurant-category">
+                <img class="restaurant-image" src="./assets/img/pizza-2589575_1280.jpg" alt="">
+                <h1 class="heading mb-24">Hauptgerichte</h1>
+
+                <div class="dish-list">
+                    <div class="dish">
+                        <div class="dish-content">
+                            <h1 class="heading">Pizza Carlos</h1>
+                            <span class="dish-description">mit Pepperonisalami und Sauce Hollandaise</span>
+                            <span class="price"> 7,50 €</span>
+                        </div>
+                        <div> <i class="fa-solid fa-plus fa-xl"></i></div>
+                    </div>
+                    <div class="dish">
+                        <div class="dish-content">
+                            <h1 class="heading">Pizza Margharita</h1>
+                            <span class="dish-description">mit Käse</span>
+                            <span class="price"> 3,50 €</span>
+                        </div>
+                        <div> <i class="fa-solid fa-plus fa-xl"></i></div>
+                    </div>
+                    <div class="dish">
+                        <div class="dish-content">
+                            <h1 class="heading">Pizza Pasta</h1>
+                            <span class="dish-description">mit Pasta du unhold</span>
+                            <span class="price"> 63,50 €</span>
+                        </div>
+                        <div> <i class="fa-solid fa-plus fa-xl"></i></div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="pasta" class="restaurant-category">
+                <img class="restaurant-image" src="./assets/img/pasta-3547078_1280.jpg" alt="">
+                <h1 class="heading mb-24">Pasta</h1>
+            </div>
+
+
+            <!--BasketButton will be here-->
+        </div>
+
+        <div class="basket-container">
+            <div class="basket">
+                <div class="basket-heading-container">
+                    <h1 class="heading">Warenkorb</h1>
+                    <hr>
+                </div>
+                <div>
+                    <div class="basket-entry pd-12">
+                        <span class="basket-dish-title">Pizza Margharita</span>
+                        <div class="basket-dish-content">
+                            <div class="entry-upselling">
+                                <i class="fa-solid fa-minus fa-sm" style="color: var(--orange);"></i>
+                                <span>1x</span>
+                                <i class="fa-solid fa-plus fa-sm" style="color: var(--orange)"></i>
+                            </div>
+                            <div class="entry-price">
+                                <span>7,50€</span>
+                                <i class="fa-solid fa-trash fa-sm" style="color: var(--orange);"></i>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="basket-price-container">
+                        <span>Zwischensumme</span><span>64,50€</span>
+                    </div>
+
+                    <div class="basket-price-container">
+                        <span>Lieferkosten</span><span>5,00€</span>
+                    </div>
+                    <div class="basket-price-container bold">
+                        <span>Gesamt</span><span>69,50€</span>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
 </body>
+
 </html>
