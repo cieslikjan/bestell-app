@@ -8,7 +8,7 @@ body {
     scroll-behavior: smooth;
 }
 
-header {
+header, footer {
     background-color: var(--orange);
     height: 120px;
 
@@ -34,9 +34,6 @@ hr {
 
 .content {
     display:flex;
-
-
-
     flex:1;
 }
 
@@ -44,8 +41,6 @@ hr {
     display: flex;
     flex-direction: column;
     width: calc(100% - 300px);
-
-
 }
 
 .restaurant-image {
@@ -85,6 +80,11 @@ hr {
 .restaurant-categories span {
     color: #B9BCBB;
     font-weight: bold;;
+}
+
+.restaurant-categories span:hover {
+    color: var(--orange);
+    font-weight: bold;
 }
 
 .restaurant-category {
@@ -140,7 +140,7 @@ hr {
 .basket-container {
     width: 300px;
     /* horizontal vertical blur spread(size) color */
-    box-shadow: 0px 156px 20px 1px #787878
+    box-shadow: 0px 0px 20px 1px #787878
 }
 
 .basket {
@@ -214,4 +214,67 @@ hr {
 .pd-12 {
     padding: 12px;
 }
+
+.basket-button {
+    display:none; 
+}
+
+.d-none{
+    display:none;
+}
+
+.basket-button-overlay {
+    height: 48px;
+
+    width: 100%;
+
+    background-color: var(--orange);
+
+    padding-left:24px;
+    padding-right:24px;
+
+    position:absolute;
+    bottom: 0;
+}
+
+.basket-overlay-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+} 
+
+@media (max-width: 700px) {
+    .basket-button {
+        display: block;
+        height: 48px;
+
+        background-color: var(--orange);
+
+        margin-left:24px;
+        margin-right:24px;
+    }
+
+    .basket-overlay-container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+    } 
+
+    .responsive-basket-container {
+        display:none;
+    }
+
+    .basket-container {
+        width: 0;
+    }
+
+    .restaurant {
+        width: 100%;
+    }
+}
+
 

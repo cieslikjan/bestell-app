@@ -8,7 +8,7 @@ let dishes = [
   {
     name: "Pizza Margharita",
     description: "mit Käse",
-    price: 7.5,
+    price: 3.5,
     category: "pizza",
   },
   {
@@ -23,7 +23,7 @@ let currentBasket = [
   {
     name: "Pizza Margharita",
     quantity: 1,
-    price: 7.5,
+    price: 3.5,
   },
 ];
 
@@ -61,9 +61,12 @@ function renderBasket() {
 function renderBasketContent() {
   let basketContentRef = document.getElementById("basket-content");
   basketContentRef.innerHTML = "";
+  let overlayRef = document.getElementById('basket-overlay-content');
+  overlayRef.innerHTML = "";
 
   for (let i = 0; i < currentBasket.length; i++) {
     basketContentRef.innerHTML += getBasketEntryTemplate(i);
+    overlayRef.innerHTML += getBasketEntryTemplate(i);
   }
 }
 
@@ -98,9 +101,10 @@ function renderBasketCheckout() {
     let orderFee = 5;
 
     currentBasket.forEach(dish => subTotal += dish.price * dish.quantity);
-
-
     basketCheckoutRef.innerHTML = getBasketCheckoutTemplate(formatMoney(subTotal),formatMoney(orderFee),formatMoney(subTotal+orderFee))
+
+    let overlayRef = document.getElementById('basket-overlay-checkout');
+    overlayRef.innerHTML = getBasketCheckoutTemplate(formatMoney(subTotal),formatMoney(orderFee),formatMoney(subTotal+orderFee));
 
 }
 
@@ -150,7 +154,6 @@ function addToBasket(index) {
     }
 
     renderBasket();
-
 }
 
 function isDishAlreadyInBasket(dish) {
@@ -162,7 +165,6 @@ function isDishAlreadyInBasket(dish) {
     }
 
     return index;
-
 }
 
 function removeBasketItem(index){
@@ -173,4 +175,10 @@ function removeBasketItem(index){
 function formatMoney(price) {
   let priceString = Number(price).toFixed(2).replace(".", ",");
   return priceString;
+}
+
+function toggleBasketOverlay() {
+  document.getElementById('basket-overlay').classList.toggle('d-none');
+  document.getElementById('content').classList.toggle('d-none');
+  document.getElementById('header').classList.toggle('d-none');
 }

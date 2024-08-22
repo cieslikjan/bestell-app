@@ -16,12 +16,12 @@
 </head>
 
 <body onload="init()">
-    <header>
+    <header id="header">
         <img class="logo" src="./assets/img/logo/Bestell App- Logo.svg" alt="">
         <i class="fa-solid fa-bars fa-2xl"></i>
     </header>
 
-    <main class="content">
+    <main class="content" id="content">
         <div class="restaurant">
             <div class="restaurant-header">
                 <img class="restaurant-image" src="./assets/img/pickles-6604595_1280.jpg" alt="">
@@ -51,9 +51,10 @@
 
 
             <!--BasketButton will be here-->
+            <button onclick="toggleBasketOverlay()" class="basket-button">Warenkorb</button>           
         </div>
 
-        <div class="basket-container">
+        <div class="basket-container responsive-basket-container">
             <div class="basket">
                 <div class="basket-heading-container">
                     <h1 class="heading">Warenkorb</h1>
@@ -65,7 +66,15 @@
         </div>
     </main>
 
-    <footer></footer>
+    <div id="basket-overlay" class="d-none basket-overlay-container ">
+        <div id="basket-overlay-content"></div>
+        <div id="basket-overlay-checkout"></div>
+        <button onclick="toggleBasketOverlay()" class="basket-button-overlay">Warenkorb</button>  
+    </div>
+
+    <footer>
+        <img class="logo" src="./assets/img/logo/Bestell App- Logo.svg" alt="">
+    </footer>
 
 </body>
 
